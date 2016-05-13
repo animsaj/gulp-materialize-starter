@@ -1,0 +1,30 @@
+{
+  "name": "gulp-materialize-starter",
+  "version": "1.0.0",
+  "description": "simple starter for app with materialize css that uses gulp as a build tool",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "/home/jasminasasha/gulp-materialize-starter/.git/"
+  },
+  "keywords": [
+    "gilp",
+    "materialize.css"
+  ],
+  "author": "animsaj",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.12.8",
+    "del": "^2.2.0",
+    "gulp-cache": "^0.4.5",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-imagemin": "^3.0.1",
+    "gulp-sass": "^2.3.1",
+    "gulp-uglify": "^1.5.3",
+    "gulp-useref": "^3.1.0",
+    "run-sequence": "^1.1.5"
+  }
+}
