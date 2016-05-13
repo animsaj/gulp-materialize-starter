@@ -11,19 +11,11 @@ var del = require('del');
 var runSequence = require('run-sequence').use(gulp);
 
 gulp.task('browserSync', function() {
-<<<<<<< HEAD
-  browserSync({
-    server: {
-      baseDir: 'app'
-    }
-  });
-=======
     browserSync.init({
         server: {
             baseDir: 'app'
         }
     });
->>>>>>> d25690d21d8f57a4da583ee37faefd119dd608ab
 });
 
 gulp.task('sass', function() {
