@@ -27,6 +27,12 @@ gulp.task('sass', function() {
       }))
 });
 
+gulp.task('watch', function() {
+    gulp.watch('app/scss/**/*.scss', ['sass']);
+    gulp.watch('app/*.html', browserSync.reload);
+    gulp.watch('app/js/**/*.js', browserSync.reload);
+});
+
 gulp.task('useref', function() {
     return gulp.src('app/*.html') //Source all html files
       .pipe(useref())
@@ -50,14 +56,8 @@ gulp.task('fonts', function() {
       .pipe(gulp.dest('dist/fonts'))
 });
 
-gulp.task('watch', ['browserSync', 'sass'], function() {
-    gulp.watch('app/scss/**/*.scss', ['sass']);
-    gulp.watch('app/*.html', browserSync.reload);
-    gulp.watch('app/js/**/*.js', browserSync.reload);
-});
-
 gulp.task('clean:dist', function() {
-    return  del.sync('dist');
+    return  del.sync(['dist/**/*', '!dist/images', '!dist/images/**/*']);
 });
 
 gulp.task('default', function(callback) {
