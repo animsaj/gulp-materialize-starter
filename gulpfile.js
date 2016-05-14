@@ -19,7 +19,7 @@ gulp.task('browserSync', function() {
 });
 
 gulp.task('sass', function() {
-    return gulp.src('app/scss/**/*/.scss') //Source all files ending with.scss in scss directory and its subdirectories
+    return gulp.src('app/scss/**/*.scss') //Source all files ending with.scss in scss directory and its subdirectories
       .pipe(sass())
       .pipe(gulp.dest('app/css'))
       .pipe(browserSync.reload({
