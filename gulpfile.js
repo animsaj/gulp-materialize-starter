@@ -39,12 +39,12 @@ gulp.task('useref', function() {
     return gulp.src('app/*.html') //Source all html files
       .pipe(useref())
       .pipe(gulpIf('*.js', uglify())) //Minifies only if it is js file
-      .pipe(gulpIf('*.css', cssnano())) //Minifies only if it is css file 
+      .pipe(gulpIf('*.css', cssnano())) //Minifies only if it is css file
       .pipe(gulp.dest('dist'))
 });
 
 gulp.task('imagemin', function() {
-    return gulp.src('app/images/**/*.+(png|jpg|gif|swg)')
+    return gulp.src('app/images/**/*.+(png|jpg|gif|swg|svg)')
       .pipe(cache(imagemin({
           gif: {
               interlaced: true
